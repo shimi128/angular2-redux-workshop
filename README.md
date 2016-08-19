@@ -1,4 +1,4 @@
-## Angular redux workshop - based pn angular2-seed
+## Angular redux workshop - based on angular2-seed
 
 A simple starter project demonstrating the basic concepts of Angular 2.
 
