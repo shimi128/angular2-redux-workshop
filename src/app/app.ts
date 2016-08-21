@@ -1,28 +1,14 @@
-import {Component} from '@angular/core';
-import {Http} from "@angular/http";
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector   : 'app',
-  template: `<h1> Angular & Redux </h1>`,
+  styleUrls:['../assets/css/bootstrap.css'],
+  encapsulation: ViewEncapsulation.None,
+  template: `
+    <div class="container">
+      <h1 class="page-header"> Angular & Redux </h1>
+     </div>
+  `,
 })
 
-export class AppComponent {
-
-  constructor(api: Http) {
-
-    // api.post('http://localhost:4000/api/login',{
-    //   username: 'admin',
-    //   password: '1234'
-    // })
-    //     .map( result => result.json() )
-    //     .subscribe(
-    //         result => console.log(result),
-    //         err => console.log(err)
-    //     )
-
-    api.get('http://localhost:4000/api/items')
-        .subscribe( result => console.log(result.json()) )
-  }
-
-
-}
+export class AppComponent {}
