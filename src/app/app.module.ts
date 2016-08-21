@@ -6,7 +6,7 @@ import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [AppComponent],
-  imports     : [BrowserModule, HttpModule,],
+  imports     : [BrowserModule, HttpModule],
   providers   : [{
     provide : LocationStrategy,
     useClass: HashLocationStrategy
