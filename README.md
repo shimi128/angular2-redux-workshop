@@ -12,3 +12,7 @@ A simple starter project demonstrating the basic concepts of Angular 2.
 - `WINDOWS ONLY` run `npm run typings-install` to install typings
 - run `npm start` to fire up dev server
 - open browser to [`http://localhost:3000`](http://localhost:3000)
+
+### How to use mock data
+- lunch BDSM interface (by clicking on th eicon on the right bottom of the screen)
+- from the top menu click `import` and choose `_mocks.json` from the project root
