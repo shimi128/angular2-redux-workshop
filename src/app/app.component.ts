@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import {Store} from "./app.store";
 
 @Component({
   selector   : 'app',
@@ -11,4 +12,10 @@ import {Component, ViewEncapsulation} from '@angular/core';
   `,
 })
 
-export class AppComponent {}
+export class AppComponent {
+
+  constructor(store: Store) {
+    console.log(store.state);
+  }
+
+}

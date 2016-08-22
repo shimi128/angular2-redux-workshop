@@ -3,6 +3,7 @@ import {AppComponent} from "./app.component";
 import {BrowserModule} from "@angular/platform-browser";
 import {HttpModule} from "@angular/http";
 import {LocationStrategy, HashLocationStrategy} from "@angular/common";
+import {Store} from "./app.store";
 
 @NgModule({
   declarations: [AppComponent],
@@ -10,7 +11,7 @@ import {LocationStrategy, HashLocationStrategy} from "@angular/common";
   providers   : [{
     provide : LocationStrategy,
     useClass: HashLocationStrategy
-  }],
+  }, Store ],
   bootstrap   : [AppComponent]
 })
 
