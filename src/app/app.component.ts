@@ -6,10 +6,13 @@ import {Component, ViewEncapsulation} from "@angular/core";
   encapsulation: ViewEncapsulation.None,
   template     : `
     <div class="container">
-      <h1 class="page-header"> Angular & Redux </h1>
+    
+      <div class="page-header clearfix">
+        <h1>Angular & Redux</h1>
+        <login-form></login-form>                        
+      </div>
       
-      <item-form></item-form>
-      
+      <item-form></item-form>      
       <app-list></app-list>                  
       
     </div>
