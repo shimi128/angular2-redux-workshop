@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux';
+import {listReducer} from "./list.reducer";
 
 export const RootReducer = combineReducers({
-  app: (state = 0) => state
+  list: listReducer
 });
