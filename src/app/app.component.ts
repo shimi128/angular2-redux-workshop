@@ -3,14 +3,15 @@ import {Store} from "./app.store";
 
 @Component({
   selector     : 'app',
-  styleUrls    : ['../assets/css/bootstrap.css'],
+  styleUrls    : ['../assets/css/bootstrap.css', '../assets/css/app.css'],
   encapsulation: ViewEncapsulation.None,
   template     : `
     <div class="container">
-    
+                 
       <div class="page-header clearfix">
         <h1>Angular & Redux</h1>
-        <login-form></login-form>                        
+        <login-form></login-form>
+        <spinner *ngIf="store.state.app.loading"></spinner>
       </div>
       
       <div *ngIf="store.state.user">
@@ -22,7 +23,7 @@ import {Store} from "./app.store";
 })
 
 export class AppComponent {
-  private store: Store;
+  private store:Store;
 
   constructor(_store:Store) {
     this.store = _store;
