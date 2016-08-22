@@ -6,6 +6,7 @@ import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 import {Store} from "./app.store";
 import {APP_ACTIONS} from "./actions/app.actions";
 import {APP_COMPONENTS} from "./components/app.components";
+import {APP_MIDDLEWARES} from "./middlewars/app.middlewares";
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import {APP_COMPONENTS} from "./components/app.components";
     {
       provide : LocationStrategy,
       useClass: HashLocationStrategy
-    }, Store, ...APP_ACTIONS],
+    }, Store, ...APP_ACTIONS, ...APP_MIDDLEWARES],
   bootstrap   : [AppComponent]
 })
 

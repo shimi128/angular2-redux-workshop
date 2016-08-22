@@ -11,10 +11,10 @@ export class UserActions {
     this.store = _store;
   }
 
-  login(info) {
+  login(username, password) {
     this.store.dispatch({
       type: USER.LOGIN,
-      payload: info
+      payload: { username, password }
     })
   }
 
@@ -23,4 +23,5 @@ export class UserActions {
       type: USER.LOGOUT
     })
   }
+
 }

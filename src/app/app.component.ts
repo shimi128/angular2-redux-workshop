@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation} from "@angular/core";
+import {Store} from "./app.store";
 
 @Component({
   selector     : 'app',
@@ -12,11 +13,18 @@ import {Component, ViewEncapsulation} from "@angular/core";
         <login-form></login-form>                        
       </div>
       
-      <item-form></item-form>      
-      <app-list></app-list>                  
-      
+      <div *ngIf="store.state.user">
+        <item-form></item-form>      
+        <app-list></app-list>                  
+      </div>
     </div>
   `,
 })
 
-export class AppComponent {}
+export class AppComponent {
+  private store: Store;
+
+  constructor(_store:Store) {
+    this.store = _store;
+  }
+}

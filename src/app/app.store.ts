@@ -1,8 +1,16 @@
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {RootReducer} from './reducers/root';
+import {Auth} from "./middlewars/auth.middleware";
+import {Injectable} from "@angular/core";
 
+@Injectable()
 export class Store {
-  private store = createStore(RootReducer);
+
+  private store;
+
+  constructor(auth: Auth) {
+    this.store = createStore(RootReducer, applyMiddleware(auth.middleware));
+  }
 
   get state(){
     return this.store.getState();
