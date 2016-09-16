@@ -8,7 +8,8 @@
     "build": "webpack --inline --colors --progress --display-error-details --display-cached",
     "watch": "npm run build -- --watch",
     "server": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
-    "start": "npm run server"
+    "start": "npm run server",
+    "mock": "json-server db.json --port 4000 -d 1000"
   },
   "contributors": [
     "Rob Wormald <robwormald@gmail.com>",
@@ -41,7 +42,6 @@
     "@angular/platform-browser": "2.0.0-rc.5",
     "@angular/platform-browser-dynamic": "2.0.0-rc.5",
     "@angular/platform-server": "2.0.0-rc.5",
-    "bdsmjs": "^0.3.1",
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
     "core-js": "2.2.0",

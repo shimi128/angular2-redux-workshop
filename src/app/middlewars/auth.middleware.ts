@@ -9,7 +9,7 @@ export class Auth {
 
   constructor(_http:Http) {
     this.http = _http;
-    this.URL  = 'http://localhost:4000/api/login';
+    this.URL  = 'http://localhost:4000/login';
   }
 
   middleware = store => next => action => {
